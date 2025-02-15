@@ -48,3 +48,46 @@ tabMainLeftHome.forEach((link) => {
     container.appendChild(button);
 });
 
+const scrollableTabs = [
+    { title: 'Luxe Lounge Chair', tags: ['Luxe', 'Lounge', 'Chair', 'Modern'], images: ['jardim5.avif', 'jardim5.avif', 'jardim5.avif', 'jardim5.avif'] },
+    { title: 'Sleek Modular Sofa', tags: ['Sleek', 'Modular', 'Sofa', 'Modern'], images: ['jardim5.avif', 'jardim5.avif', 'jardim5.avif', 'jardim5.avif'] },
+];
+
+let activeTab = 0;
+const tabsContainer = document.getElementById('tabsContainer');
+const tabContent = document.getElementById('tabContent');
+
+function renderTabs() {
+    tabsContainer.innerHTML = '';
+    scrollableTabs.forEach((tab, index) => {
+        const button = document.createElement('button');
+        button.className = `tab-button ${activeTab === index ? 'active' : ''}`;
+        button.innerText = tab.title;
+        button.onclick = () => setActiveTab(index);
+        tabsContainer.appendChild(button);
+    });
+    setActiveTab(activeTab);
+}
+
+function setActiveTab(index) {
+    activeTab = index;
+    tabContent.innerHTML = `
+        <div class="tabContentMediumHome">
+            ${scrollableTabs[index].images.map((img, i) => `
+                <div>
+                    <img src="../imagens/${img}" alt="image-${i}">
+                    <h5>${scrollableTabs[index].tags[i]}</h5>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function scrollTabs(direction) {
+    tabsContainer.scrollBy({
+        left: direction === 'left' ? -150 : 150,
+        behavior: 'smooth'
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderTabs);
