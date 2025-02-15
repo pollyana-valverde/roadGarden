@@ -1,0 +1,426 @@
+@import url(cores.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: var(--creamyBiscotti);
+}
+
+/* Navbar */
+.navbar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-radius: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--tuscanRed);
+}
+
+.menu {
+    gap: 2px;
+    border: 1px solid var(--tuscanRed);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.menu a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--tuscanRed);
+    border-radius: 50px;
+    margin: 0 3px;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+.menu a:hover {
+    border: 1px solid var(--tuscanRed);
+}
+
+.login a {
+    font-size: 18px;
+    padding: 10px 32px;
+    text-decoration: none;
+    background-color: var(--tuscanRed);
+    color: var(--white);
+    border-radius: 50px;
+    transition: all .3s;
+}
+
+.login a:hover {
+    box-shadow: 1px 1px 10px 1px var(--tuscanRed);
+}
+
+@media (max-width: 700px) {
+    .menu {
+        top: unset;
+        bottom: 1rem;
+        border-radius: 20px;
+        left: 0;
+        right: 60%;
+    }
+}
+
+/* Conteúdo */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*parte inicial da página*/
+.mainHome {
+    display: flex;
+}
+
+.mainLeftHome {
+    padding: 40px;
+    position: relative;
+    background-image: url('../imagens/jardim5.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.mainLeftHome::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.tagLeftHome {
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.tagLeftHome button {
+    padding: 6px 10px !important;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    transition: all .3s;
+}
+
+.tagLeftHome button:hover {
+    background-color: var(--white);
+    color: var(--oliveWood);
+}
+
+.tagLeftHome button.activeTag {
+    background-color: var(--white);
+    color: var(--oliveWood);
+}
+
+.textLeftHome {
+    z-index: 1;
+    line-height: 50px;
+}
+
+.textLeftHome h2,
+.textLeftHome p {
+    color: var(--white);
+}
+
+.textLeftHome h2 {
+    font-size: 52px;
+    font-weight: 400;
+    margin: unset !important;
+}
+
+.textLeftHome p {
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: unset !important;
+    margin-bottom: 10px;
+}
+
+.callBacktLeftHome a button {
+    text-align: center;
+    align-self: center !important;
+    font-size: 20px;
+    background-color: var(--white);
+    color: var(--oliveWood);
+    padding: 6px 12px !important;
+    border-radius: 50px;
+    border: none;
+    transition: all .3s;
+}
+
+.callBacktLeftHome a i {
+    text-align: center;
+    font-size: 17px;
+    background-color: var(--white);
+    color: var(--oliveWood);
+    padding: 14px !important;
+    border-radius: 50px;
+    border: none;
+    transition: all .3s;
+}
+
+.callBacktLeftHome a button:hover,
+.callBacktLeftHome a i:hover {
+    background-color: var(--creamyBiscotti);
+}
+
+.mainRightHome {
+    border-radius: 20px;
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    width: 50%;
+}
+
+.titleRightHome h1 {
+    color: var(--oliveWood);
+    font-size: 60px;
+    margin: 0 20px;
+    line-height: 70px;
+    opacity: 0.6;
+    font-weight: 400;
+    text-align: left;
+}
+
+.anuncioRightHomeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.anuncioRightHome {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: var(--creamyBiscotti);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.anuncioRightHomeTxtContainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.anuncioRightHomeActionTxt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncioRightHome .exclusive {
+    font-size: 20px;
+    width: fit-content;
+    background-color: var(--creamyBiscotti2);
+    color: var(--oliveWood);
+    padding: 10px 15px !important;
+    border-radius: 50px;
+}
+
+.anuncioRightHomeText h4,
+.anuncioRightHomeText p {
+    color: var(--oliveWood);
+}
+
+.anuncioRightHomeText h4 {
+    font-size: 37px;
+}
+
+.anuncioRightHomeText p {
+    opacity: 0.6;
+    font-size: 23px;
+}
+
+.anuncioRightHome img {
+    width: 230px !important;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.anuncioRightHome a i {
+    background-color: var(--creamyBiscotti2);
+    color: var(--oliveWood);
+    padding: 16px !important;
+    border-radius: 40px;
+    font-size: 22px;
+    transition: all .3s;
+}
+
+.anuncioRightHome a i:hover {
+    background-color: var(--creamyBiscottiDark);
+}
+
+
+/*parte média da página*/
+.textMediumHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textMediumHomeLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.textMediumHomeRight {
+    display: flex;
+    width: 50%;
+}
+
+.textMediumHome h1,
+.textMediumHome p {
+    color: var(--oliveWood);
+}
+
+.textMediumHome h1 {
+    font-size: 50px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.textMediumHome p {
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+.tagRightHome .p-tabview-nav-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior: contain auto;
+    position: relative;
+}
+
+/*news letter final home*/
+.newsLetterHome {
+    position: relative;
+    background-image: url('../imagens/jardim7.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.newsLetterHome::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+
+.newsLetterHomeText {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsLetterHomeText h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--creamyBiscotti);
+    margin-bottom: 20px;
+}
+
+
+.newsLetterHomeSubscribe input {
+    background-color: transparent;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--creamyBiscotti);
+    padding: 7px 20px;
+    color: var(--creamyBiscotti);
+    transition: all .2s ease;
+}
+
+.newsLetterHomeSubscribe input:focus {
+    outline: none;
+    border: 2px solid var(--creamyBiscotti);
+}
+
+.newsLetterHomeSubscribe input::placeholder {
+    color: var(--creamyBiscotti);
+}
+
+.newsLetterHomeSubscribe button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--creamyBiscotti);
+    border-radius: 50px;
+    border: 1px solid var(--creamyBiscotti);
+    padding: 7px 20px;
+    color: var(--oliveWood);
+    transition: all .3s ease;
+}
+
+.newsLetterHomeSubscribe button:hover {
+    background-color: var(--creamyBiscottiDark);
+    border-color: var(--creamyBiscottiDark);
+}
