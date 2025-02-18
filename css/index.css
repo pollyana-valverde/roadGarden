@@ -1,11 +1,6 @@
 @import url(cores.css);
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", serif;
-}
+
 
 body {
     background-color: var(--creamyBiscotti);
@@ -301,7 +296,8 @@ body {
 
 
 /*parte média da página*/
-.mediumHome{
+.mediumHome {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     padding: 80px 10px;
@@ -350,8 +346,9 @@ body {
 }
 
 
-
+/*tab do medium home*/
 .tagMediumHome {
+    margin-top: 60px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -366,8 +363,8 @@ body {
 .tab-header {
     display: flex;
     overflow-x: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-behavior: smooth;
     flex-grow: 1;
     background-color: transparent;
@@ -379,7 +376,7 @@ body {
 }
 
 .tab-header::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 .tab-button {
@@ -390,7 +387,7 @@ body {
     color: var(--creamyBiscottiDark);
     transition: all .3s;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .tab-button.active {
@@ -406,7 +403,8 @@ body {
 
 .scroll-button {
     cursor: pointer;
-    padding:6px 12px;
+    font-size: 27px;
+    padding: 3px 15px !important;
     border: none;
     background-color: transparent;
     outline: none;
@@ -417,7 +415,7 @@ body {
 }
 
 .scroll-button:hover {
-    background-color:  var(--palidRedDark);
+    background-color: var(--palidRedDark);
     color: var(--creamyBiscotti);
     border-radius: 60px;
 }
@@ -433,25 +431,207 @@ body {
 }
 
 .tab-content {
-    background-color: transparent;
     padding: 15px 0;
-    margin-top: -1px;
 }
 
+.tabContentMediumHome {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-/*news letter final home*/
-.newsLetterHome {
+.tabContentInterMediumHome {
     position: relative;
-    background-image: url('../imagens/jardim7.avif');
+    transition: all .3s ease;
+}
+
+.tabContentInterMediumHome:hover {
+    transform: translateY(-7px);
+}
+
+.tabContentInterMediumHome img {
+    object-fit: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 25px;
+}
+
+.tabContentInterMediumHome h5 {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    bottom: 0;
+    margin: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    padding: 3px 15px;
+    border-radius: 50px;
+    color: var(--creamyBiscotti);
+    border: 1.7px dashed var(--creamyBiscotti);
+}
+
+/* end home*/
+
+.endHome {
+    margin: 130px 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.anuncioEndtHome {
+    width: 30%;
+    position: relative;
+    background-image: url('../imagens/jardim2.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
+    height: 70vh;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.anuncioEndtHome::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.anuncioEndHomeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    z-index: 1;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.anuncioEndHomeContent h4 {
+    font-size: 36px;
+    color: var(--creamyBiscotti);
+    margin: unset;
+    font-weight: 500;
+}
+
+.anuncioEndHomeContent p {
+    margin: unset;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5rem;
+    color: var(--creamyBiscotti);
+    opacity: 0.8;
+}
+
+.anuncioEndHomeContent a button {
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid var(--creamyBiscotti);
+    color: var(--creamyBiscotti);
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.anuncioEndHomeContent button:hover {
+    border-color: transparent;
+}
+
+/* faq end home */
+.faqEndHome  {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faqEndHome h1{
+    color: var(--oliveWood); 
+    opacity: 0.6; 
+    font-weight: 500; 
+    font-size: 50px;  
+    line-height: 57px;
+}
+
+.faqEndHome h3{
+    color: var(--oliveWood); 
+    opacity: 0.5; 
+    font-weight: 400; 
+    margin-bottom: 20px; 
+    font-size: 25px;
+}
+
+.faqEndHome .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faqEndHome .faq .faq-header {
+    text-align: left;
+    width: 100%;
+    padding: 10px 17px;
+    background-color: transparent;
+    border: 1px solid var(--creamyBiscottiDark) !important;
+    font-size: 25px !important;
+    font-weight: 500;
+    color: var(--oliveWood);
+    opacity: 0.6;
+    border-radius: 20px !important;
+}
+
+.faqEndHome .faq .faq-header.collapsed {
+    padding-bottom: unset;
+    color: var(--oliveWood);
+    font-weight: 600;
+    border: 1px solid var(--oliveWood) !important;
+    border-bottom: none !important;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.faqEndHome .faq .faq-body {
+    padding-top: unset;
+    color: var(--oliveWood);
+    padding: 17px;
+    border-radius: 0 0 10px 10px !important;
+    border: 1px solid var(--oliveWood) !important;
+    border-top: none !important;
+}
+
+.faqEndHome .accordion-body {
+    padding-top: unset !important;
+}
+
+/*news letter final home*/
+.newsLetterHome {
+    margin-top: 30px;
+    position: relative;
+    background-image: url('../imagens/jardim6.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 50vh;
     overflow: hidden;
+    padding: 30px;
 }
 
 .newsLetterHome::after {
@@ -468,6 +648,7 @@ body {
 
 
 .newsLetterHomeText {
+    margin-top: 20px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -476,15 +657,20 @@ body {
 }
 
 .newsLetterHomeText h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 400;
     color: var(--creamyBiscotti);
     margin-bottom: 20px;
 }
 
+.newsLetterHomeSubscribe{
+    display: flex;
+    gap:20px;
+}
 
 .newsLetterHomeSubscribe input {
     background-color: transparent;
+    font-size: 20px;
     border-radius: 50px;
     backdrop-filter: blur(8px);
     border: 1px solid var(--creamyBiscotti);
@@ -506,7 +692,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     background-color: var(--creamyBiscotti);
     border-radius: 50px;

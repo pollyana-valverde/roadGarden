@@ -16,3 +16,10 @@
     --creamyBiscottiLow: #f1e6d237;
     --slateBlueLow: #7079982e;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
