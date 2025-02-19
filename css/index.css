@@ -202,7 +202,7 @@ body {
 .mainRightHome {
     border-radius: 20px;
     display: flex;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding: 20px;
     flex-direction: column;
     justify-content: space-between;
@@ -756,6 +756,7 @@ body {
 }
 
 .colunaRodape a{
+    text-decoration: none;
     z-index: 1 !important;
     margin: unset;  
     color: var(--creamyBiscotti);
@@ -768,6 +769,7 @@ body {
 }
 
 .colunaRodapeCentral a{
+    text-decoration: none;
     color: var(--creamyBiscotti);
     opacity: 1;
     z-index: 1;
