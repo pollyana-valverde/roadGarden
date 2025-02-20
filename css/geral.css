@@ -1,0 +1,154 @@
+@import url(cores.css);o
+
+body {
+    background-color: var(--creamyBiscotti);
+}
+
+/* Navbar */
+.navbar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-radius: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--tuscanRed);
+}
+
+.menu {
+    gap: 2px;
+    border: 1px solid var(--tuscanRed);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.menu a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--tuscanRed);
+    border-radius: 50px;
+    margin: 0 3px;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+.menu a:hover {
+    border: 1px solid var(--tuscanRed);
+}
+
+.login a {
+    font-size: 18px;
+    padding: 10px 32px;
+    text-decoration: none;
+    background-color: var(--tuscanRed);
+    color: var(--white);
+    border-radius: 50px;
+    transition: all .3s;
+}
+
+.login a:hover {
+    box-shadow: 1px 1px 10px 1px var(--tuscanRed);
+}
+
+@media (max-width: 700px) {
+    .menu {
+        top: unset;
+        bottom: 1rem;
+        border-radius: 20px;
+        left: 0;
+        right: 60%;
+    }
+}
+
+/* Conteúdo */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*estilo do rodape*/
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: var(--tuscanRed);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.rodape::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.colunaRodape{
+    width: 20%;
+}
+
+.colunaRodape div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.colunaRodape h5{
+    z-index: 1;
+    margin: unset;
+    color: var(--creamyBiscotti);
+    font-size: 15px;
+}
+
+.colunaRodape a{
+    text-decoration: none;
+    z-index: 1 !important;
+    margin: unset;  
+    color: var(--creamyBiscotti);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.colunaRodapeCentral{
+    width: 55%;
+}
+
+.colunaRodapeCentral a{
+    text-decoration: none;
+    color: var(--creamyBiscotti);
+    opacity: 1;
+    z-index: 1;
+    font-size: xx-large;
+    font-weight: bold;
+}
