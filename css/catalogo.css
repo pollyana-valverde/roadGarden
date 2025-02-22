@@ -1,5 +1,3 @@
-
-
 .catalogoHeader {
     position: relative;
     background-image: url('../imagens/jardim10.avif');
@@ -40,22 +38,22 @@
     color: var(--creamyBiscotti);
 }
 
-.catalogoHeader p a{
+.catalogoHeader p a {
     color: var(--slateBlue) !important;
     transition: all .3s ease;
 }
 
-.catalogoHeader p a:hover{
+.catalogoHeader p a:hover {
     text-decoration: underline !important;
 }
 
-.catalogoCategory{
+.catalogoCategory {
     display: flex;
     justify-content: start;
     margin-top: 20px;
 }
 
-.catalogoCategory p{
+.catalogoCategory p {
     font-size: 23px;
     font-weight: 500;
     margin: unset;
@@ -68,7 +66,7 @@
     position: relative;
 }
 
-.catalogoProdutos-container button.scroll-button{
+.catalogoProdutos-container button.scroll-button {
     color: var(--creamyBiscotti);
     background-color: var(--oliveWood);
     padding: 7px 12px;
@@ -76,17 +74,16 @@
     transition: all .3s ease;
 }
 
-.catalogoProdutos-container button.scroll-button:hover{
+.catalogoProdutos-container button.scroll-button:hover {
     color: var(--oliveWood);
     background-color: var(--creamyBiscotti);
 }
 
 .catalogoProdutos-content {
     display: flex;
-    
     overflow-x: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-behavior: smooth;
     flex-grow: 1;
     background-color: transparent;
@@ -98,37 +95,61 @@
 }
 
 .catalogoProdutos-content::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
-.contentProdutos{
+.contentProdutos {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.contentProdutos .imgProduto img{
-height: 300px;
-width: 300px;
-border-radius: 20px;
-object-fit: cover;
+.contentProdutos .imgProduto img {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
-.contentProdutos .nomeProduto{
+.contentProdutos .nomeProduto {
     position: absolute;
+    width: 100%;
+    height: 0px;
     color: transparent;
-    left: 20px;
-    bottom: -20px;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
     transition: all.4s ease;
-    font-weight: 600;
-    font-size: x-large;
     background-color: transparent;
-   border-radius: 50px;
+    border-radius: 20px;
 }
 
-.contentProdutos:hover .nomeProduto{
+.contentProdutos:hover .nomeProduto {
+    height: 100px;
     color: var(--creamyBiscotti);
-    bottom: 10px;
+    background-color: var(--slateBlueLow);
+    bottom: 7px;
+    left: 0;
     backdrop-filter: blur(10px);
     padding: 2px 12px;
+}
+
+.contentProdutos .nomeProduto h4 {
+    font-weight: 600;
+    font-size: x-large;
+}
+
+
+.contentProdutos .nomeProduto a {
+    color: var(--slateBlue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contentProdutos .nomeProduto a span {
+    transition: all .4s ease
+}
+
+.contentProdutos .nomeProduto a:hover span {
+    margin-left: 10px;
 }

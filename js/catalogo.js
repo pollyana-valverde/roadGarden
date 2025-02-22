@@ -1,9 +1,131 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tagMediumHome = document.getElementById("tagMediumHome");
     const itensFiltrados = [
-        { geralCategoria: "Categoria 1", produtos: ["Produto 1A", "Produto 1B", "Produto 1C", "Produto 1C","Produto 1C","Produto 1C","Produto 1C","Produto 1C","Produto 1C",] },
-        { geralCategoria: "Categoria 2", produtos: ["Produto 2A", "Produto 2B", "Produto 2C"] },
-        { geralCategoria: "Categoria 3", produtos: ["Produto 3A", "Produto 3B", "Produto 3C"] }
+        {
+            geralCategoria: "Categoria 1",
+            produtos: [
+                {
+                    img : 'jardim1.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim2.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim4.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim5.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim4.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim5.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+            ]
+        },
+        {
+            geralCategoria: "Categoria 2",
+            produtos: [
+                {
+                    img : 'jardim1.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim2.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim4.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim5.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+            ]
+        },
+        {
+            geralCategoria: "Categoria 3",
+            produtos: [
+                {
+                    img : 'jardim1.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim2.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim4.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim5.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+                {
+                    img : 'jardim3.avif',
+                    nome : 'Produto 1A',
+                    desc : 'Produto 1A',
+                },
+            ]
+        },
     ];
 
     function renderCarrossel() {
@@ -20,11 +142,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         ${categoria.produtos.map(produto => `
                            <div class='contentProdutos'>
                                 <div class="imgProduto">
-                                    <img src="/imagens/jardim2.avif" 
+                                    <img src="/imagens/${produto.img}" 
                                          alt="Banner ${Math.ceil((index + 1) / 3)}" 
                                     />
                                 </div>
-                                <div class="nomeProduto">${produto}</div>
+                                <div class="nomeProduto">
+                                    <h4>${produto.nome}</h4>
+                                    <p>${produto.desc}</p>
+                                    <a href='#'>Ver mais <span>></span></a>
+                                </div>
                            </div>
                             `).join('')}
                     </div>

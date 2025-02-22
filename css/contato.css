@@ -12,53 +12,40 @@
 .suporteHeaderText {
     flex-direction: column;
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0;
+    margin-bottom: 40px;
     text-align: center;
     
 }
 
 .suporteHeaderText h1 {
+    font-size: 45px;
     color: var(--oliveWood);
     opacity: 0.6;
 }
 
 .suporteHeaderText p {
-    margin: unset;
+    font-size: 20px;
     color: var(--oliveWood);
     opacity: 0.5;
 }
 
 .suporteHeaderCorpo {
-    align-items: center;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    gap: 40px;
 }
 
-.suporteContainer {
-    z-index: 1;
-    /* width: 70%; */
-    border-radius: 30px;
-    width: 45% !important;
-}
-
-.suporteContainer h5,
-.suporteContainer p {
-    color: var(--oliveWood);
-}
-
-.suporteContainer h5 {
-    opacity: 0.6;
-}
-
-.suporteContainer p {
-    opacity: 0.5;
+.suporteContainer{
+    width: 55%;
+    margin-left: 5%;
 }
 
 .suporteContainer label {
     color: var(--oliveWood);
-    font-size: 12px;
+    font-size: 14px;
     padding: 0 6px !important;
     border-radius: 5px;
     margin-bottom: 6px;
@@ -73,7 +60,7 @@
     color: var(--oliveWood);
     border: 1px solid var(--oliveWoodLow) !important;
     border-radius: 50px;
-    padding: 8px 15px;
+    padding:  15px;
     background-color: transparent;
     transition: all .3s ease;
 }
@@ -97,17 +84,19 @@
 
 .suporteContainer input::placeholder,
 .suporteContainer textarea::placeholder {
+    font-size:medium;
     color: var(--oliveWood);
     opacity: 0.3;
 }
 
 
 .suporteContainer button {
+    font-size: large;
     text-decoration: none;
     background-color: var(--tuscanRed);
     color: var(--white);
     border-radius: 50px;
-    padding: 8px 15px;
+    padding: 15px;
     transition: all .3s;
     border: 1px solid var(--tuscanRed);
 }
@@ -116,18 +105,6 @@
     box-shadow: 1px 1px 10px 1px var(--tuscanRed);
 }
 
-.suporteContainer a {
-    color: var(--palidRed);
-    text-decoration: underline !important;
-}
-
-.suporteContainer i {
-    color: var(--palidRed);
-}
-
-.suporteContainer a:hover {
-    color: var(--palidRedDark);
-}
 
 /*grupos de input*/
 .colunaSuporteInput {
@@ -148,5 +125,50 @@
 .colunaSuporteInput div textarea,
 .colunaSuporteInput button {
     width: 100%;
+}
 
+
+/*parte direita do contato*/
+
+.suporteContainerRight {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 30px;
+    width: 35% !important;
+}
+
+.suporteContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.suporteContainerRight h5,
+.suporteContainerRight p {
+    color: var(--oliveWood);
+}
+
+.suporteContainerRight h5 {
+    opacity: 0.6;
+    font-size: 24px;
+}
+
+.suporteContainerRight p {
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.suporteContainerRight a {
+    font-size: 18px;
+    color: var(--palidRed);
+    text-decoration: underline !important;
+}
+
+.suporteContainerRight i {
+    color: var(--palidRed);
+}
+
+.suporteContainerRight a:hover {
+    color: var(--palidRedDark);
 }
