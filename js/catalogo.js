@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         ${categoria.produtos.map(produto => `
                            <div class='contentProdutos'>
                                 <div class="imgProduto">
-                                    <img src="/imagens/${produto.img}" 
+                                    <img src="imagens/${produto.img}" 
                                          alt="Banner ${Math.ceil((index + 1) / 3)}" 
                                     />
                                 </div>
