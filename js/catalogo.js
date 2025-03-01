@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="nomeProduto">
                                     <h4>${produto.nome}</h4>
                                     <p>${produto.desc}</p>
-                                    <a href='#'>Ver mais <span>></span></a>
+                                    <a href='detalheProduto.html'>Ver mais <span>></span></a>
                                 </div>
                            </div>
                             `).join('')}

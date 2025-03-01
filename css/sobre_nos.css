@@ -1,4 +1,4 @@
-.content{
+.content {
     display: flex;
     gap: 50px;
 }
@@ -12,7 +12,7 @@
 .mainLeftHome {
     padding: 40px;
     position: relative;
-    background-image: url('../imagens/jardim1.avif');
+    background-image: url('../imagens/jardim10.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,8 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    height: 80vh;
+    width: 100%;
+    height: 85vh;
     overflow: hidden;
 }
 
@@ -39,6 +39,7 @@
 
 .textLeftHome {
     z-index: 1;
+    text-align: center;
     line-height: 50px;
 }
 
@@ -48,101 +49,236 @@
 }
 
 .textLeftHome h2 {
-    font-size: 52px;
-    font-weight: 400;
+    font-size: 72px;
+    font-weight: 600;
     margin: unset !important;
 }
 
 .textLeftHome p {
-    font-size: 25px;
-    font-weight: 200;
+    font-size: 30px;
+    font-weight: 300;
     margin-top: unset !important;
     margin-bottom: 10px;
 }
 
-.mainRightHome {
-    border-radius: 20px;
+
+.valores_sobreNos {
+    margin: 40px 0;
     display: flex;
-    /* margin-top: 30px; */
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80vh;
-    width: 50%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.titleRightHomeContainer {
-    padding: 40px;
+.valores_sobreNos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px dashed var(--creamyBiscotti2);
+    transition: all .3s ease-in-out;
+}
+
+.valores_sobreNos div h4 {
     position: relative;
-    background-image: url('../imagens/jardim6.avif');
+    z-index: 1;
+    font-size: 29px;
+    color: var(--oliveWood);
+    transition: all .3s ease;
+}
+
+.valores_sobreNos div p {
+    z-index: 1;
+    position: relative;
+    font-size: 19px;
+    color: var(--oliveWoodLow);
+    transition: all .3s ease;
+}
+
+.valores_sobreNos div:hover h4 {
+    color: var(--creamyBiscotti);
+}
+
+.valores_sobreNos div:hover p {
+    color: var(--creamyBiscotti2);
+}
+
+.valores_sobreNos .valor:hover {
+    position: relative;
+    border-color: transparent;
+    background-image: url('../imagens/jardim7.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .4s ease-in-out;
+}
+
+.valores_sobreNos .missao:hover {
+    position: relative;
+    border-color: transparent;
+    background-image: url('../imagens/jardim8.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .4s ease-in-out;
+}
+
+
+.valores_sobreNos .historia:hover {
+    position: relative;
+    border-color: transparent;
+    background-image: url('../imagens/jardim11.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .4s ease-in-out;
+}
+
+
+.valores_sobreNos .valor:hover::after,
+.valores_sobreNos .historia:hover::after,
+.valores_sobreNos .missao:hover::after {
+    content: "";
+    border: 2px solid transparent;
+    position: absolute;
+    backdrop-filter: blur(7px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    pointer-events: none;
+    transition: all .4s ease-in-out;
+}
+
+.parteIhistoria, .parteIIhistoria{
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parteIhistoria img, .parteIIhistoria img{
+width: 40%;
+height: 500px;
+object-fit: cover;
+border-radius: 40px;
+}
+
+.txt_parteIhistoria, .txt_parteIIhistoria{
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.txt_parteIIhistoria{
+    text-align: end;
+}
+
+.txt_parteIhistoria h5, .txt_parteIIhistoria h5{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.txt_parteIhistoria h4, .txt_parteIIhistoria h4{
+    font-size: 55px;
+    font-weight: 500;
+}
+
+
+.newsLetterHome {
+    margin-bottom: 30px;
+    position: relative;
+    background-image: url('../imagens/jardim13.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
     display: flex;
-    height: 25vh;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    overflow: hidden;
+    padding: 30px;
 }
 
-.titleRightHomeContainer::after {
+.newsLetterHome::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7px);
     border-radius: 20px;
     pointer-events: none;
-    height: 25vh;
 }
 
-.titleRightHomeContainer.second{
-    background-image: url('../imagens/jardim5.avif');
 
-}
-
-.titleRightHome h1 {
-    color: var(--creamyBiscotti);
-    font-size: 40px;
-    margin: 0 20px;
-    line-height: 45px;
-    font-weight: 500;
-    text-align: left;
-}
-
-.anuncioRightHomeContainer {
+.newsLetterHomeText {
+    margin-top: 20px;
+    z-index: 1;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-}
-
-
-.anuncioRightHome {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
     align-items: center;
+}
+
+.newsLetterHomeText h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--creamyBiscotti);
+    margin-bottom: 20px;
+}
+
+.newsLetterHomeSubscribe{
+    display: flex;
+    gap:20px;
+}
+
+.newsLetterHomeSubscribe input {
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--creamyBiscotti);
+    padding: 7px 20px;
+    color: var(--creamyBiscotti);
+    transition: all .2s ease;
+}
+
+.newsLetterHomeSubscribe input:focus {
+    outline: none;
+    border: 2px solid var(--creamyBiscotti);
+}
+
+.newsLetterHomeSubscribe input::placeholder {
+    color: var(--creamyBiscotti);
+}
+
+.newsLetterHomeSubscribe button {
+    display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
     background-color: var(--creamyBiscotti);
-    border-radius: 30px;
-}
-
-.anuncioRightHome img {
-    width: 25% !important;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.anuncioRightHome a i {
-    background-color: var(--creamyBiscotti2);
+    border-radius: 50px;
+    border: 1px solid var(--creamyBiscotti);
+    padding: 7px 20px;
     color: var(--oliveWood);
-    padding: 16px !important;
-    border-radius: 40px;
-    font-size: 22px;
-    transition: all .3s;
+    transition: all .3s ease;
 }
 
-.anuncioRightHome a i:hover {
+.newsLetterHomeSubscribe button:hover {
     background-color: var(--creamyBiscottiDark);
+    border-color: var(--creamyBiscottiDark);
 }
