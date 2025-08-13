@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encomendas</title>
+    <link rel="stylesheet" href="css/geral.css" />
+    <link rel="stylesheet" href="css/encomendas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="imagens/Flower.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">RoadGarden</a>
+      </div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre_nos.html">Sobre nós</a>
+        <a href="encomendas.html">Encomendas</a>
+      </div>
+      <div class="login">
+        <a href="login">Login</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <section class="encomendas_table">
+        <h2>Encomendas</h2>
+        <table >
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Valor unitário</th>
+              <th>Total</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="corpoTable">
+            <tr>
+              <td>Orquídea</td>
+              <td>Flor</td>
+              <td>Rara</td>
+              <td>R$34,99</td>
+              <td>R$34,99</td>
+              <td>
+                <button onclick="excluirEmcomendas()"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="encomendas_forms">
+        <h2>Faça o pedido aqui!</h2>
+        <form id="formEncomendas" onsubmit="submitForm(event)">
+          <div class="input_body">
+            <label for="nome">Nome</label>
+            <input id="nome" value="" type="text" />
+          </div>
+          <div class="input_body">
+            <label for="produto">produto</label>
+            <select name="produto" id="produto">
+              <option value="Orquídea">Orquídea</option>
+              <option value="Girassol">Girassol</option>
+              <option value="Rosa">Rosa</option>
+              <option value="Tulipa">Tulipa</option>
+            </select>
+            <!-- <input id="produto" value="" type="text"> -->
+          </div>
+          <div class="input_body">
+            <label for="quant">quantidade</label>
+            <input id="quant" value="" type="number" />
+          </div>
+          <div class="input_body">
+            <label for="valorUni">valor unitário</label>
+            <input id="valorUni" value="" type="float" />
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+    <script src="js/encomendas.js"></script>
+  </body>
+</html>

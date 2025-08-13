@@ -1,0 +1,21 @@
+.content {
+    margin: 80px 10px 0 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.encomendas_table table thead tr th{
+    background-color: var(--oliveWood);
+    color: var(--white);
+    padding: 5px 10px;
+    border: var(--oliveWood) solid 1px;
+    font-weight: 500;
+}
+
+.encomendas_table table tbody tr td{
+    padding: 3px 10px;
+    color: var(--oliveWood);
+    border: var(--oliveWood) solid 1px;
+}
