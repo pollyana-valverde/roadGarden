@@ -2,20 +2,78 @@
     margin: 80px 10px 0 10px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
+    flex-wrap: wrap;
+    align-items: start;
 }
 
-.encomendas_table table thead tr th{
-    background-color: var(--oliveWood);
+.encomendas_table h2,
+.encomendas_forms h2 {
+    color: var(--oliveWood);
+}
+
+.encomendas_table table{
+    width: 50%;
+}
+
+.encomendas_table table thead tr th {
+    background-color: var(--tuscanRed);
     color: var(--white);
     padding: 5px 10px;
-    border: var(--oliveWood) solid 1px;
+    border: var(--tuscanRed) solid 1px;
     font-weight: 500;
 }
 
-.encomendas_table table tbody tr td{
+.encomendas_table table tbody tr td {
     padding: 3px 10px;
-    color: var(--oliveWood);
-    border: var(--oliveWood) solid 1px;
+    color: var(--tuscanRed);
+    border: var(--tuscanRed) solid 1px;
+}
+
+.encomendas_forms {
+    width: 50%;
+}
+
+.encomendas_forms .input_group {
+    display: flex;
+    gap: 10px;
+}
+
+.encomendas_forms .input_group .input_body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.encomendas_forms .input_group .input_body label {
+    font-weight: 500;
+    color: var(--tuscanRed);
+}
+
+.encomendas_forms .input_group .input_body input,
+.encomendas_forms .input_group .input_body select {
+    padding: 10px;
+    border: transparent solid 1px;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 1px 1px 20px 1px var(--tuscanRedLight) inset;
+    color: var(--tuscanRed);
+}
+
+.encomendas_forms .input_group .input_body input:focus,
+.encomendas_forms .input_group .input_body select:focus {
+    outline: var(--tuscanRed) solid 2px;
+}
+
+.encomendas_forms button{
+    padding: 7px 20px;
+    border: transparent solid 1px;
+    border-radius: 10px;
+    background-color: var(--tuscanRed);
+    color: var(--creamyBiscotti);
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
 }

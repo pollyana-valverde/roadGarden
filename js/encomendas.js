@@ -1,13 +1,38 @@
 const corpoTable = document.getElementById("corpoTable"); // id do tbody da tabela.
 
+// Pegando os valores digitados pelo usuário nos inputs, cada input tem um id.
+  const produtoSelect = document.getElementById("produto");
+  const valorUniInput = document.getElementById("valorUni");
+
+  produtoSelect.addEventListener("change", function() {
+    const produto = this.value; // pega o valor do produto selecionado.
+
+    const valor = 
+    produto === "Orquídea" ? 24.99 : 
+    produto === "Girassol" ? 49.99 : 
+    produto === "Rosa" ? 34.99 : 
+    produto === "Tulipa" ? 69.99 : "";
+
+    valorUniInput.value = "R$" + valor; // atribui o valor unitário correspondente ao produto selecionado.
+    // valorUniInput.textContent = "R$" + parseFloat(valor).toFixed(2); // formata o valor unitário para duas casas decimais e adiciona o prefixo "R$".
+  }); // adiciona o evento de mudança no select do produto, e atribui o valor unitário correspondente ao produto selecionado.
+
 function submitForm(event) {
   event.preventDefault(); // evita que a tela recarregue.
 
-  // Pegando os valores digitados pelo usuário nos inputs, cada input tem um id.
+  // // Pegando os valores digitados pelo usuário nos inputs, cada input tem um id.
   const nome = document.getElementById("nome").value;
   const produto = document.getElementById("produto").value;
   const quant = document.getElementById("quant").value;
-  const valorUni = document.getElementById("valorUni").value;
+  const valorUni = document.getElementById("valorUni").value = produto === "Orquídea" ? 24.99 : produto === "Girassol" ? 49.99 : produto === "Rosa" ? 34.99 : produto === "Tulipa" ? 69.99 : ""; // valor unitário baseado no produto selecionado.
+
+  if (produto === "Selecione uma opção") {
+    alert("Por favor, selecione um produto válido.");
+    return; // interrompe a execução se o produto não for selecionado.
+  } else if (quant <= 0 || isNaN(quant)) {
+    alert("Por favor, insira uma quantidade válida.");
+    return; // interrompe a execução se a quantidade não for válida.
+  }
 
   const formEncomenda = document.getElementById("formEncomendas"); // id do formulário (pai).
 
@@ -69,4 +94,3 @@ function excluirEmcomendas(element) {
   localStorage.setItem("encomendas", JSON.stringify(lista)); // atualiza a lista e salva no localStorage.
   linha.remove(); //Remove visualmente a linha da tabela no HTML.
 }
-

@@ -39,9 +39,59 @@
     </nav>
 
     <div class="content">
+      <section class="encomendas_forms">
+        <h2>Faça o pedido aqui!</h2>
+        <form id="formEncomendas" onsubmit="submitForm(event)">
+          <div class="input_group">
+            <div class="input_body">
+              <label for="nome">Nome</label>
+              <input id="nome" value="" type="text" />
+            </div>
+            <div class="input_body">
+              <label for="produto">Produto</label>
+              <!-- <select name="produto" id="produto">
+                <option value="Selecione uma opção">Selecione uma opção</option>
+                <option value="Orquídea">Orquídea</option>
+                <option value="Girassol">Girassol</option>
+                <option value="Rosa">Rosa</option>
+                <option value="Tulipa">Tulipa</option>
+              </select> -->
+              <!-- <input id="produto" value="" type="text"> -->
+
+               <select name="produto" id="produto" >
+                <option value="Selecione uma opção">Selecione uma opção</option>
+                <option value="Orquídea">R$ 24,99 - Orquídea</option>
+                <option value="Girassol">R$ 49.99 - Girassol</option>
+                <option value="Rosa">R$ 34.99 - Rosa</option>
+                <option value="Tulipa">R$ 69.99 - Tulipa</option>
+              </select>
+            </div>
+          </div>
+          <div class="input_group">
+            <div class="input_body">
+              <label for="quant">quantidade</label>
+              <input id="quant" value="" type="number" />
+            </div>
+            <div class="input_body">
+              <label for="valorUni">valor unitário</label>
+              <input id="valorUni" value="" type="float" readonly/>
+
+              <!-- <select name="valorUni" id="valorUni" >
+                <option value="Selecione uma opção">Selecione uma opção</option>
+                <option value="24.99">R$ 24,99 - Orquídea</option>
+                <option value="49.99">R$ 49.99 - Girassol</option>
+                <option value="34.99">R$ 34.99 - Rosa</option>
+                <option value="69.99">R$ 69.99 - ulipa</option>
+              </select> -->
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
       <section class="encomendas_table">
         <h2>Encomendas</h2>
-        <table >
+        <table>
           <thead>
             <tr>
               <th>Nome</th>
@@ -53,47 +103,9 @@
             </tr>
           </thead>
           <tbody id="corpoTable">
-            <tr>
-              <td>Orquídea</td>
-              <td>Flor</td>
-              <td>Rara</td>
-              <td>R$34,99</td>
-              <td>R$34,99</td>
-              <td>
-                <button onclick="excluirEmcomendas()"><i class="fa-solid fa-trash"></i></button>
-              </td>
-            </tr>
+            <tr></tr>
           </tbody>
         </table>
-      </section>
-
-      <section class="encomendas_forms">
-        <h2>Faça o pedido aqui!</h2>
-        <form id="formEncomendas" onsubmit="submitForm(event)">
-          <div class="input_body">
-            <label for="nome">Nome</label>
-            <input id="nome" value="" type="text" />
-          </div>
-          <div class="input_body">
-            <label for="produto">produto</label>
-            <select name="produto" id="produto">
-              <option value="Orquídea">Orquídea</option>
-              <option value="Girassol">Girassol</option>
-              <option value="Rosa">Rosa</option>
-              <option value="Tulipa">Tulipa</option>
-            </select>
-            <!-- <input id="produto" value="" type="text"> -->
-          </div>
-          <div class="input_body">
-            <label for="quant">quantidade</label>
-            <input id="quant" value="" type="number" />
-          </div>
-          <div class="input_body">
-            <label for="valorUni">valor unitário</label>
-            <input id="valorUni" value="" type="float" />
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
       </section>
     </div>
     <script src="js/encomendas.js"></script>
